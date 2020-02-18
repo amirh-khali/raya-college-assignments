@@ -1,0 +1,17 @@
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:tint="#5f2020"
+    android:viewportWidth="200.0"
+    android:viewportHeight="200.0"
+    android:width="200dp"
+    android:height="200dp">
+
+    <path
+        android:fillColor="#5f2020"
+        android:pathData="M-50,200
+                          A-100,133 0 0,0 250,200 z"/>
+    <path
+        android:fillColor="#5f2020"
+        android:pathData="M-50,200
+                          A-100,133 0 1,1 250,200 z"/>
+</vector>

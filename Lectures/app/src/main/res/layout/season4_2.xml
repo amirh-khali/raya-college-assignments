@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/black"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:id="@+id/main_layout"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/aksa">
+
+        <TextView
+            android:id="@+id/pokemon1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="32dp"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:id="@+id/pokemon2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="32dp"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/aksa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageButton
+            android:layout_margin="32dp"
+            android:onClick="pokemon1"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:scaleType="fitXY"
+            android:background="#00000000"
+            android:src="@drawable/pokemon2"
+            android:gravity="center"
+            />
+
+
+        <ImageButton
+            android:layout_margin="32dp"
+            android:onClick="pokemon2"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:scaleType="fitXY"
+            android:background="#00000000"
+            android:src="@drawable/pokemon1"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/you_win"
+        android:layout_below="@id/aksa"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_weight="1"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:text="You Win"
+        android:textSize="32dp"
+        android:textColor="#f00"/>
+
+</RelativeLayout>

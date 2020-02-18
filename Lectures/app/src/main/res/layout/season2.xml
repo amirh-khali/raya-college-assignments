@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/ali_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="ali"
+        android:textSize="50dp"
+        android:background="@drawable/qab"
+        android:textColor="#ffffff"/>
+    <TextView
+        android:id="@+id/babak_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ali_text_view"
+        android:text="babak"
+        android:textSize="50dp"
+        android:background="@drawable/qab"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/poria_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/babak_text_view"
+        android:text="poria"
+        android:textSize="50dp"
+        android:background="@drawable/qab"
+        android:textColor="#ffffff"/>
+
+    <LinearLayout
+        android:id="@+id/faraz_ina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/keyvan_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="keyvan"
+            android:textColor="#fff"
+            android:textSize="50dp"
+            android:background="@drawable/qab"/>
+
+        <TextView
+            android:id="@+id/faraz_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="faraz"
+            android:textColor="#fff"
+            android:textSize="50dp"
+            android:background="@drawable/qab"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="farhad"
+            android:textColor="#fff"
+            android:textSize="50dp"
+            android:background="@drawable/qab"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/faraz_ina"
+        android:text="mahdi"
+        android:textSize="50dp"
+        android:textColor="#fff"
+        android:background="@drawable/qab"/>
+
+    <TextView
+        android:id="@+id/kamran_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="kamran"
+        android:textColor="#fff"
+        android:textSize="50dp"
+        android:background="@drawable/qab"/>
+
+    <TextView
+        android:id="@+id/nader_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/kamran_text_view"
+        android:text="nader"
+        android:textColor="#fff"
+        android:textSize="50dp"
+        android:background="@drawable/qab"/>
+
+    <TextView
+        android:id="@+id/reza_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/kamran_text_view"
+        android:layout_alignLeft="@id/kamran_text_view"
+        android:layout_above="@id/kamran_text_view"
+        android:text="reza"
+        android:textColor="#fff"
+        android:textSize="50dp"
+        android:background="@drawable/qab"/>
+
+</RelativeLayout>

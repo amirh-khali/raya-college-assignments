@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202020">
+
+    <LinearLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:background="#5f2020">
+
+
+        <ImageView
+            android:onClick="delete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_delete_black_24dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:text="سبد خرید برگر"
+            android:textColor="#fff"
+            android:textSize="25dp"
+            android:gravity="center_horizontal"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:layout_below="@id/action_bar"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/qab"
+        android:layout_margin="16dp"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/indenum"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true">
+
+            <Button
+                android:onClick="decrease"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="-"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:background="#00000000"
+                />
+
+            <TextView
+                android:id="@+id/num"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:text="0"
+                android:textColor="#fff"
+                android:gravity="center"
+                />
+
+            <Button
+                android:onClick="increase"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="+"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:background="#00000000"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/indenum"
+            android:layout_alignRight="@id/indenum"
+            android:layout_alignLeft="@id/indenum"
+            android:layout_marginTop="20dp"
+            >
+            
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12،000 تومان"
+                android:textColor="#fff"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/price_with_offer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="10،000 تومان"
+                android:textColor="#ff0000"
+                android:textSize="16dp"
+                android:gravity="center"/>
+
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/indenum"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="پیتزا قارچ و گوشت"
+                android:textColor="#fff"
+                android:gravity="center_vertical"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:paddingLeft="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="خمیر پیتزا دست ساز، 300 گرم گوشت چرخ شده طعم دار شده، پنیر جدار، پنیر موزارلا، فلفل دلمه ای، قارچ، سس مخصوص"
+                android:textColor="#fff"
+                android:gravity="center_vertical"
+                android:textSize="13dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@drawable/curve"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="انتخاب آدرس"
+            android:textSize="20dp"
+            android:textColor="#fff"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_location_on_black_24dp"/>
+
+    </LinearLayout>
+        
+</RelativeLayout>
