@@ -1,6 +1,6 @@
 {
   "images": {
-    "GUI-BACKGROUND": "menu_image.jpg",
-    "XXX": "xxx.jpg"
+    "GUI-BACKGROUND": 50,
+    "XXX": 100
   }
 }
