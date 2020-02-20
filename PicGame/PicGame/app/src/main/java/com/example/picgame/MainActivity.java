@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Pair;
 import android.view.View;
+import android.widget.Chronometer;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Pair<String, Integer>> rounds = new ArrayList<>();
 
     private Integer currentImageID;
-    public Integer currentRound;
+    Integer currentRound;
     private Integer score = 100;
     private Integer radius = 15;
     private String currentName;
@@ -43,34 +44,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         new ResourceManager(this);
         addRounds();
         initial();
     }
 
-    private void addRounds() {
-        ResourceManager.addLevel("bicycle", R.drawable.bicycle, this);
-        ResourceManager.addLevel("calculator", R.drawable.calculator, this);
-        ResourceManager.addLevel("car", R.drawable.car, this);
-        ResourceManager.addLevel("cat", R.drawable.cat, this);
-        ResourceManager.addLevel("dog", R.drawable.dog, this);
-        ResourceManager.addLevel("fish", R.drawable.fish, this);
-        ResourceManager.addLevel("gun", R.drawable.gun, this);
-        ResourceManager.addLevel("sun", R.drawable.sun, this);
-    }
 
     public void initial() {
-
         currentRound = 0;
         scoreBox = findViewById(R.id.score);
         levelBox = findViewById(R.id.level);
         display();
 
-         countDownTimer = new CountDownTimer(18000, 1000) {
+        //*
+         countDownTimer = new CountDownTimer(180000, 1000) {
 
             public void onTick(long millisUntilFinished) {
-                TextView tv = findViewById(R.id.timer);
+                TextView tv = findViewById(R.id.chronometer);
                 tv.setText("remaining: " + millisUntilFinished / 1000);
                 timeRemained = (int)millisUntilFinished;
             }
@@ -80,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         };
-
+        //*/
         View.OnClickListener cl = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,6 +105,16 @@ public class MainActivity extends AppCompatActivity {
         nextRound();
     }
 
+    private void addRounds() {
+        ResourceManager.addLevel("bicycle", R.drawable.bicycle, this);
+        ResourceManager.addLevel("calculator", R.drawable.calculator, this);
+        ResourceManager.addLevel("car", R.drawable.car, this);
+        ResourceManager.addLevel("cat", R.drawable.cat, this);
+        ResourceManager.addLevel("dog", R.drawable.dog, this);
+        ResourceManager.addLevel("fish", R.drawable.fish, this);
+        ResourceManager.addLevel("gun", R.drawable.gun, this);
+        ResourceManager.addLevel("sun", R.drawable.sun, this);
+    }
 
     public void nextRound () {
         radius = 15;
@@ -164,9 +164,9 @@ public class MainActivity extends AppCompatActivity {
             buttonArray.add(new MyButton(relativeLayout , this, i, c, ansButtonArray));
         }
 
-        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<Integer>();
         for (int i=1; i< 33; i++) {
-            list.add(i);
+            list.add(new Integer(i));
         }
         Collections.shuffle(list);
         for (int i=0; i<name.length(); i++) {
@@ -211,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void display() {
         scoreBox.setText(String.format("Score: %5s", score));
-        levelBox.setText("Level " + (currentRound+1) + "/" + rounds.size());
+        levelBox.setText((currentRound+1) + "/" + rounds.size());
     }
 
 }

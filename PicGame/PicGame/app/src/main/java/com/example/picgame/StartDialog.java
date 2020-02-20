@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class StartDialog extends Dialog implements
-        View.OnClickListener {
+        android.view.View.OnClickListener {
 
     private Activity c;
     private Button confirm;
