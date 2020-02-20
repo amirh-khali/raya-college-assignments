@@ -1,18 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/colorAccent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:paddingTop="16dp">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/tbgl1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="-0.1"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/tbgl2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="1.1"/>
+        <TextView
+            android:id="@+id/level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toRightOf="@+id/score"
+            app:layout_constraintRight_toLeftOf="@id/hint_blur"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            />
+
+        <TextView
+            android:id="@+id/chronometer"
+            app:layout_constraintLeft_toLeftOf="@+id/tbgl1"
+            app:layout_constraintBottom_toTopOf="@id/score"
+            android:gravity="right|center"
+            android:paddingRight="16dp"
+            android:layout_margin="4dp"
+            android:textSize="18sp"
+            app:layout_constraintWidth_percent="0.35"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layer"
+            />
+        <TextView
+            android:id="@+id/score"
+            app:layout_constraintLeft_toLeftOf="@+id/tbgl1"
+            app:layout_constraintTop_toBottomOf="@id/chronometer"
+            android:gravity="right|center"
+            android:paddingRight="16dp"
+            android:layout_margin="4dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Score: 0"
+            app:layout_constraintWidth_percent="0.35"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layer"/>
+        <Button
+            android:id="@+id/hint_blur"
+            app:layout_constraintRight_toLeftOf="@+id/tbgl2"
+            app:layout_constraintTop_toBottomOf="@id/hint_word"
+            android:gravity="left|center"
+            android:paddingLeft="16dp"
+            android:layout_margin="4dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="decrease Blur\n 80 point"
+            android:textAllCaps="false"            app:layout_constraintWidth_percent="0.35"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:background="@drawable/layer"
+            />
+        <Button
+            android:id="@+id/hint_word"
+            app:layout_constraintRight_toLeftOf="@+id/tbgl2"
+            app:layout_constraintBottom_toTopOf="@id/hint_blur"
+            android:gravity="left|center"
+            android:paddingLeft="16dp"
+            android:layout_margin="4dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="show letter\n 50 point"
+            android:textAllCaps="false"
+            app:layout_constraintWidth_percent="0.35"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layer"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.jgabrielfreitas.core.BlurImageView
+        android:id="@+id/main_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:padding="8dp"
+        android:layout_margin="36dp"
+        android:src="@drawable/dog"
+        app:radius="25"
+        android:scaleType="fitXY"
+        android:background="@drawable/layer"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/ans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+    </RelativeLayout>
+</LinearLayout>
