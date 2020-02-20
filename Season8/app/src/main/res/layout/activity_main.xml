@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/numbers"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:background="#D81B60"
+        android:text="Numbers"
+        android:textSize="32dp"
+        android:textColor="#fff"/>
+
+    <Button
+        android:id="@+id/family_members"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:background="#1B60D8"
+        android:text="Family Members"
+        android:textSize="32dp"
+        android:textColor="#fff"/>
+
+    <Button
+        android:id="@+id/colors"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:background="#60D81B"
+        android:text="Colors"
+        android:textSize="32dp"
+        android:textColor="#fff"/>
+
+    <Button
+        android:id="@+id/phrases"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:background="#6D108B"
+        android:text="Phrases"
+        android:textSize="32dp"
+        android:textColor="#fff"/>
+
+</LinearLayout>

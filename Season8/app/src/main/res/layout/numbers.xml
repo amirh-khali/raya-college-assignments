@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".Numbers"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_margin="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="#fff"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:layout_height="128dp"
+            android:background="#D81B60"
+            android:text="Numbers"
+            android:textSize="32dp"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="#fff"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:layout_height="128dp"
+            android:background="#D81B60"
+            android:text="Numbers"
+            android:textSize="32dp"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="#fff"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:layout_height="128dp"
+            android:background="#D81B60"
+            android:text="Numbers"
+            android:textSize="32dp"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="#fff"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:layout_height="128dp"
+            android:background="#D81B60"
+            android:text="Numbers"
+            android:textSize="32dp"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="#fff"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:layout_height="128dp"
+            android:background="#D81B60"
+            android:text="Numbers"
+            android:textSize="32dp"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="#fff"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:layout_height="128dp"
+            android:background="#D81B60"
+            android:text="Numbers"
+            android:textSize="32dp"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
