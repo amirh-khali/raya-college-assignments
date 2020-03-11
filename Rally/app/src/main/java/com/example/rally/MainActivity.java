@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -34,9 +35,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void click(View view) {
         final Handler t = new Handler();
+        Log.d("AmirH", "1");
         t.postDelayed(new Runnable() {
             @Override
             public void run() {
+                Log.d("AmirH", "2");
                 for (int i = 0; i < cars.size(); ++i) {
                     if (!cars.get(i).move()) {
                         Toast.makeText(getApplicationContext(),"Car " + (i + 1) + " Win",Toast.LENGTH_SHORT).show();
@@ -45,6 +48,6 @@ public class MainActivity extends AppCompatActivity {
                 }
                 t.postDelayed(this, 50);
             }
-        }, 50);
+        }, 5000);
     }
 }
