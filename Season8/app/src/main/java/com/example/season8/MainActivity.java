@@ -1,12 +1,20 @@
 package com.example.season8;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
+import android.app.Activity;
+import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+
+import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,42 +23,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Context context = this;
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.black_heart);
+        mp.start();
 
-        Button nums = findViewById(R.id.numbers);
-        nums.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent mass = new Intent(MainActivity.this,Numbers.class);
-                startActivity(mass);
-            }
-        });
+        ViewPager viewPager = findViewById(R.id.my_view_pager);
+        TabLayout tabLayout=findViewById(R.id.my_tabs);
 
-        Button colors = findViewById(R.id.colors);
-        colors.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent mass = new Intent(MainActivity.this,Colors.class);
-                startActivity(mass);
-            }
-        });
+        MyPagerAdapter myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
 
-        Button famMem = findViewById(R.id.family_members);
-        famMem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent mass = new Intent(MainActivity.this,FamilyMembers.class);
-                startActivity(mass);
-            }
-        });
-
-        Button phrases = findViewById(R.id.phrases);
-        phrases.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent mass = new Intent(MainActivity.this,Phrases.class);
-                startActivity(mass);
-            }
-        });
+        tabLayout.setupWithViewPager(viewPager);
+        viewPager.setAdapter(myPagerAdapter);
     }
 }

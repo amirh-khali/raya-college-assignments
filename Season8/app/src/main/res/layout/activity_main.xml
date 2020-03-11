@@ -1,47 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="#202020"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/my_Relative">
 
-    <Button
-        android:id="@+id/numbers"
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/my_tabs"
         android:layout_width="match_parent"
-        android:layout_height="128dp"
-        android:background="#D81B60"
-        android:text="Numbers"
-        android:textSize="32dp"
-        android:textColor="#fff"/>
+        android:layout_height="wrap_content"
+        app:tabSelectedTextColor="#202020"
+        app:tabRippleColor="#E91E63"
+        app:tabIndicatorColor="#FF0000"
+        app:tabIndicatorGravity="stretch"
+        android:background="#202020"
+        app:tabTextColor="#fff"/>
 
-    <Button
-        android:id="@+id/family_members"
+    <androidx.viewpager.widget.ViewPager
+        android:layout_below="@id/my_tabs"
+        android:id="@+id/my_view_pager"
         android:layout_width="match_parent"
-        android:layout_height="128dp"
-        android:background="#1B60D8"
-        android:text="Family Members"
-        android:textSize="32dp"
-        android:textColor="#fff"/>
+        android:layout_height="match_parent"/>
 
-    <Button
-        android:id="@+id/colors"
-        android:layout_width="match_parent"
-        android:layout_height="128dp"
-        android:background="#60D81B"
-        android:text="Colors"
-        android:textSize="32dp"
-        android:textColor="#fff"/>
-
-    <Button
-        android:id="@+id/phrases"
-        android:layout_width="match_parent"
-        android:layout_height="128dp"
-        android:background="#6D108B"
-        android:text="Phrases"
-        android:textSize="32dp"
-        android:textColor="#fff"/>
-
-</LinearLayout>
+</RelativeLayout>
