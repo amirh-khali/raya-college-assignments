@@ -2,8 +2,12 @@
 <resources>
     <color name="colorPrimaryDark">#FFA932</color>
     <color name="colorPrimaryDarkBW">#646464</color>
+    <color name="colorPrimaryDarkR">#640404</color>
+    <color name="colorPrimaryDarkG">#046404</color>
     <color name="colorPrimary">#F8CC4B</color>
     <color name="colorPrimaryBW">#A3A3A3</color>
+    <color name="colorPrimaryR">#A30303</color>
+    <color name="colorPrimaryG">#03A303</color>
     <color name="colorAccent">#FCFFD9</color>
     <color name="colorAccentBW">#FCFCFC</color>
     <color name="colorDarkBackground">#222222</color>

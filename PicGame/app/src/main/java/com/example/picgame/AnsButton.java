@@ -29,14 +29,17 @@ public class AnsButton {
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         params.weight = 1;
+        params.setMargins(2, 2, 2, 2);
         myButton.setLayoutParams(params);
         parent.addView(myButton);
 
         myButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (((MainActivity) context).gameStop) return;
                 if (!clickable) return;
                 clickable = false;
+                ((MainActivity)context).tap.start();
                 myButton.setBackground(context.getDrawable(R.drawable.layer_bw));
                 ((MainActivity)context).buttonArray.get(place).setText((String) myButton.getText());
                 myButton.setText("");

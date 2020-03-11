@@ -7,7 +7,7 @@ android:radius="5dp"/>
         android:width="5dp"
         android:color="@color/colorPrimary"/>
     <solid
-        android:color="@color/dialog_background"/>
+        android:color="@color/colorDarkBackground"/>
     <size
         android:width="50dp"
         android:height="80dp"/>
