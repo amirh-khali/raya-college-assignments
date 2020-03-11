@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202020">
+
+    <Button
+        android:id="@+id/frag_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="click"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/frags_tabs"
+        android:layout_below="@id/frag_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabSelectedTextColor="#E91E63"
+        app:tabRippleColor="#3F51B5"
+        app:tabIndicatorColor="#FFEB3B"
+        app:tabIndicatorGravity="stretch"
+        android:outlineSpotShadowColor="#FF5722"
+        android:outlineAmbientShadowColor="#9C27B0"
+        android:background="#009688"
+        app:tabTextColor="#fff" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/frags_place"
+        android:layout_below="@id/frags_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+    </androidx.viewpager.widget.ViewPager>
+
+</RelativeLayout>
